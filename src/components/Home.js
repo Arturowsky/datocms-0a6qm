@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import client from "../client.js";
 import qs from "qs";
 import { Image } from "react-datocms"
-
-const RECIPES_PER_PAGE = 2;
+import "../scss/blogs.scss"
+import { MojContext } from "./Context.js";
+const RECIPES_PER_PAGE = 10;
 
 const Home = props => {
   const [recipes, setRecipes] = useState();
   const [isFetching, setIsFetching] = useState(false);
   const [skipping, setSkip] = useState(0);
+  const [ilosc, setIlosc] = useContext(MojContext)
 
   useEffect(
     () => {
@@ -42,17 +44,20 @@ const Home = props => {
   );
 
   return (
-    <section>
-      <ul className="Home-ul">
+    <section className="blog-section">
+      <h1>{ilosc}</h1>
+      <button onClick={() => setIlosc(ilosc +1)}>Dodaj do ilosci</button>
+      <button onClick={() => setIlosc(ilosc -1)}>Odejmij od cyfry powyzej</button>
+      <article className="Home-article">
         {recipes &&
           recipes.recipes.map(recipe => (
-            <li className="Home-li" key={`recipe-${recipe.id}`}>
+            <div className="Home-li" key={`recipe-${recipe.id}`}>
               <Link to={`/recipes/${recipe.slug}`} className="Home-link">
                 <Image
                   className="Home-img"
                   data={recipe.coverImage.responsiveImage}
                 />
-                <div>
+                <div className="blog-details">
                   <h3 className="Home-li-title">{recipe.title}</h3>
                   <p>
                     {recipe.abstract
@@ -63,9 +68,9 @@ const Home = props => {
                   </p>
                 </div>
               </Link>
-            </li>
+            </div>
           ))}
-      </ul>
+      </article>
       {isFetching && <p className="Home-li-title">...Loading</p>}
       {recipes && recipes.meta.count > RECIPES_PER_PAGE && (
         <Link
@@ -91,7 +96,7 @@ const query = `
       slug
       abstract
       coverImage {
-        responsiveImage(imgixParams: { fit: crop, w: 300, h: 180 }) {
+        responsiveImage(imgixParams: { fit: crop, w: 330, h: 210 }) {
           aspectRatio
           width
           sizes

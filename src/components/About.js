@@ -25,7 +25,7 @@ const Authors = () => {
   return (
     <section>
       {isFetching ? (
-        <p className="Home-li-title">...trwa wczytywanie</p>
+        <p className="Home-li-title">...Loading</p>
       ) : (
         <div>
           {authors &&

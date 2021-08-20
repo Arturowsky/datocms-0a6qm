@@ -1,0 +1,76 @@
+// MIXINS
+@mixin grid-col-2 {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);  
+}
+@mixin grid-col-3 {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+@mixin grid-col-4 {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+@mixin grid-col-5 {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(5, 1fr);
+}
+@mixin grid-col-6 {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(6, 1fr);
+}
+@mixin grid-col-7 {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(7, 1fr);
+}
+@mixin grid-col-8 {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+// CONTAINERS WIDTH
+$w-full: 100%;
+$w-1024: 1024px;
+$w-1200: 1200px;
+$w-1280: 1280px;
+$w-1440: 1440px;
+
+// CONTAINERS HEIGHT
+$h-full: 100%;
+$h-200: 200px;
+$h-300: 300px;
+$h-400: 400px;
+$h-500: 500px;
+$h-600: 600px;
+
+// COLORS 
+$site-bg: #fff;
+$nav-bg: #fff;
+$nav-link: #3D424F;
+$btn: #EAE8E8;
+$btn-primary-bg: #6B62E0;
+
+$tech-stack-section-bg: #222F3E;
+$tech-heading: #e6e4e4;
+$tech-paragraph: #c1c1c1;
+
+// FONTS
+$comforta: 'Comfortaa', cursive;
+
+// BUTTONS
+
+@mixin btn-primary {
+    font-family: $comforta;
+    font-size: 1.125rem;
+    color: $btn;
+    background: $btn-primary-bg;
+    font-weight: 300;
+    border-radius: 5px;
+}

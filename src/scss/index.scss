@@ -1,0 +1,215 @@
+// IMPORTS
+@import "./settings.scss";
+
+// INDEX JS
+html {
+    font-size: 16px;
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: $site-bg;
+    overflow-x: hidden;
+}
+// HERO COMPONENT
+.hero {
+    width: $w-1200;
+    height: $h-600;
+    @include grid-col-2;
+    margin: 50px auto;
+    
+}
+.intro-name {
+    p {
+        font-family: $comforta;
+        font-size: 1.5rem;
+    }
+}
+.my-name {
+    font-family: $comforta;
+    font-size: 4.5rem;
+    font-weight: 300;
+    color: #454343;
+    span {
+        display: block;
+        font-weight: 700;
+        color: #363636;
+    }
+    
+}
+// STACK COMPONENT
+.wave {
+    width: $w-full;
+    height: auto;
+    overflow-x: hidden;
+    
+    
+}
+.stack-bg {
+    background: $tech-stack-section-bg;
+    width: 100%;
+    transform: scaleY(1.08);
+}
+.tech-stack {
+    width: $w-1200;
+    height: auto;
+    background: $tech-stack-section-bg;
+    padding: 0;
+    margin: 0 auto;
+    @include grid-col-2;
+    gap: 20px;
+    // padding: 20px;
+    .stack-info {
+        display: grid;
+        place-items: center;
+        margin: 50px 0;
+    }
+    h1 {
+        font-family: $comforta;
+        font-size: 3.5rem;
+        color: $tech-heading;
+    }
+    p {
+        font-family: $comforta;
+        font-size: 1.4rem;
+        color: $tech-paragraph;
+        text-align: center;
+        line-height: 2;
+    }
+    
+    
+}
+.tech-stack-details {
+    width: $w-1024;
+    margin: 0 auto;
+    @include grid-col-8;
+    margin: 25px auto;
+    
+}
+.single-stack {
+    margin-bottom: 25px;
+    .single-stack-logo {
+        height: 80px;
+        width: 100%;
+        gap: 20px;
+        display: grid;
+    place-items: center;
+    
+    }
+    h2 {
+        font-family: $comforta;
+        color: $tech-paragraph
+    }
+    p {
+        font-family: $comforta;
+        color: $tech-paragraph
+    }
+    .single-stack-title {
+        text-align: center;
+        h2 {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+
+// MEDIA QUERIES
+
+@media (max-width: 480px) {
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .hero {
+        width: 100vw;
+        height: auto;
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr;
+        // margin: 10px 10px;
+    }
+    .hero-img {
+        img {
+            width: 100vw;
+            transform: scale(0.8);
+        }
+    }
+    .intro-name {
+        width: 100vw;
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        p {
+            text-align: center;
+            font-size: 1.2rem;
+            span {
+                display: block;
+                font-size: 3rem;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .my-name {
+        
+        font-size: 1.5rem;
+        p {
+            font-size: 1.2rem;
+            word-wrap: wrap;
+        }
+    }
+    .wave {
+        width: 100vw;
+        img {
+            width: 100vw;
+        }
+    }
+    
+    .stack-bg {
+        width: 100vw;
+        transform: scale(1);
+    }
+    .stack-info {
+        margin: 0 20px;
+        img {
+            display: none;
+        }
+    }
+    .single-stack {
+        transform: scale(0.8);
+    }
+    .tech-stack {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.2rem;
+            padding: 10px;
+            width: 90vw;
+        }
+    }
+    .tech-stack-details {
+        width: 100vw;
+        display: grid;
+        
+        grid-template-columns: repeat(4,1fr);
+    }
+    .stack-img {
+        transform: scale(0.7);
+    }
+    .top-wave {
+        top: 5px;
+        position: relative;
+    }
+    .bottom-wave {
+        top: -30px;
+        position: relative;
+    }
+
+}
