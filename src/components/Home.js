@@ -45,9 +45,9 @@ const Home = props => {
 
   return (
     <section className="blog-section">
-      <h1>{ilosc}</h1>
+      {/* <h1>{ilosc}</h1>
       <button onClick={() => setIlosc(ilosc +1)}>Dodaj do ilosci</button>
-      <button onClick={() => setIlosc(ilosc -1)}>Odejmij od cyfry powyzej</button>
+      <button onClick={() => setIlosc(ilosc -1)}>Odejmij od cyfry powyzej</button> */}
       <article className="Home-article">
         {recipes &&
           recipes.recipes.map(recipe => (
@@ -62,7 +62,7 @@ const Home = props => {
                   <p>
                     {recipe.abstract
                       .split(" ")
-                      .slice(0, 10)
+                      .slice(0, 20)
                       .join(" ")}
                     ...
                   </p>
@@ -78,7 +78,7 @@ const Home = props => {
           disabled={isFetching}
           to={`?skip=${skipping + RECIPES_PER_PAGE}`}
         >
-          Show More Recipes
+         Pokaż więcej wpisów...
         </Link>
       )}
     </section>
@@ -96,7 +96,7 @@ const query = `
       slug
       abstract
       coverImage {
-        responsiveImage(imgixParams: { fit: crop, w: 330, h: 210 }) {
+        responsiveImage(imgixParams: { fit: crop, w: 650, h: 300 }) {
           aspectRatio
           width
           sizes

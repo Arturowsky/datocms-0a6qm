@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { ContextProvider } from "./Context"
 
@@ -7,7 +7,7 @@ import Home from "./Home";
 import About from "./About";
 import Recipe from "./Recipe";
 import Homepage from "./Homepage";
-// import { useContext } from "react";
+
 
 const App = () => (
   <ContextProvider>

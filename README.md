@@ -22,3 +22,5 @@ then run:
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 GraphQL Request documentation can be found [here](https://github.com/prisma/graphql-request)
+REACT_APP_DATO_API_TOKEN
+@datocms_api_token_54166

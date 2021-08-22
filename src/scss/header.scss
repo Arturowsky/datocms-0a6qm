@@ -23,6 +23,7 @@
     align-items: center;
     background: $nav-bg;
     
+    
 }
 .Header-navLink {
     font-family: $comforta;
@@ -48,8 +49,41 @@
     // text-underline-position: under;
     // text-decoration: 3px underline skyblue;
 }
+.sub-container {
+    width: 100vw;
+    height: 60vh;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    z-index: 9999;
+    
+}
 .sub-menu {
-    display: none;
+    width: $w-1280;
+    height: 500px;
+    background: #ffffff;
+    // border: 1px solid #aeb2b3;
+    border-radius: 3px;
+    margin: 50px auto;
+    // top: 200px;
+    // left: 100px;
+    
+    box-shadow: 0px 40px 55px 1px rgba(0, 0, 0, 0.2);
+    display: grid;
+    transform: translate(100%);
+    transition: all 0.2s ease-out;
+    background: url("../assets/mod.svg")
+
+   
+}
+.menu-trigger {
+    background: none;
+    // border: 1px solid #c8caca;
+    border: none;
+    &:hover {
+        cursor: pointer;
+        // border: 1px solid #22a6b3
+    }
 }
 .open-project:hover {
     .sub-menu {

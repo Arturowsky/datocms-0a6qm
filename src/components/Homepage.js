@@ -25,7 +25,7 @@ const Artur = () => {
   }, [ilosc]);
   return (
     <div className="w-full">
-      <h1>datocms-0a6</h1>
+      
       <Hero />
       <Stack />
       <Projects />
