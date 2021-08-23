@@ -98,6 +98,7 @@
     .Header-header {
         width: 100vw;
         height: 60px;
+        // box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.05)
     }
     .Header-nav {
         width: 100vw;
@@ -107,6 +108,7 @@
         div {
             img {
                 transform: scale(0.6);
+                margin-left: -50px;
             }
         }
     }
