@@ -137,4 +137,21 @@
             font-size: 0.6rem;
         }
     }
+    .single-post {
+        width: 100vw;
+        // padding: 20px;
+        h1.Recipe-title {
+            font-family: $comforta;
+            font-size: 2rem;
+            padding: 10px;
+        }
+        strong {
+            padding: 10px;
+        }
+    }
+    .Recipe-abstract {
+        font-size: 1.4rem;
+        padding: 10px;
+        text-align: justify;
+    }
 }
