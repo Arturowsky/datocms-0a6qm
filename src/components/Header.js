@@ -60,12 +60,13 @@ const Header = () => {
         <div
           className="progress-indicator"
           style={{ width: `${ilosc}%` }}
-        ></div><div className="expand-menu-wrapper" style={{height: menuHeight}}><div className="expand-menu" style={{visibility: menuVisibility}}>My Extra Menu</div></div>
+        ></div>
+        <div className="expand-menu-wrapper" style={{height: menuHeight}}><div className="expand-menu" style={{visibility: menuVisibility}}>My Extra Menu</div></div>
         <nav className="Header-nav">
           <div>
             <img src={logo} alt="Artur Lewandowicz" />
           </div>
-          <div>
+          <div className="menu-links">
             <NavLink
               exact
               to="/"
@@ -117,6 +118,7 @@ const Header = () => {
           </button>
         </nav>
       </header>
+      {/* <div className="expand-menu-wrapper" style={{height: menuHeight}}><div className="expand-menu" style={{visibility: menuVisibility}}>My Extra Menu</div></div> */}
       {/* <div className="sub-container" style={{height: menuDisplay}}>
         <div
           className="sub-menu" style={{transform: `translateX(${menuTranslate}%)`}}

@@ -7,7 +7,13 @@
     background: linear-gradient(to right,#FF3E85, #5FC5C5);
 }
 .expand-menu-wrapper {
+    width: 100%;
     transition: height 0.2s ease-in-out;
+    .expand-menu {
+        width: $w-1280;
+        background: pink;
+        margin: 0 auto;
+    }
 }
 .Header-header {
     width: 100%;
@@ -100,7 +106,7 @@
     }
     .Header-header {
         width: 100vw;
-        height: 60px;
+        // height: 60px;
         // box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.05)
     }
     .Header-nav {
@@ -114,6 +120,14 @@
                 margin-left: -50px;
             }
         }
+    }
+    .menu-links {
+        display: none;
+    }
+    .expand-menu {
+        width: 100vw;
+        background: pink;
+        margin: 0 auto;
     }
     
 }
