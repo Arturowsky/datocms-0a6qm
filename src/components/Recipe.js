@@ -32,7 +32,7 @@ const Recipe = props => {
   return (
     <section className="single-post">
       {isFetching ? (
-        <h2>Loading recipe...</h2>
+        <h2>Wczytywanie...</h2>
       ) : (
         recipe && (
           <article>

@@ -5,6 +5,7 @@
     position: relative;
     width: $w-1200;
     margin: 0 auto;
+    margin-bottom: 200px;
 }
 .blog-details {
     padding: 20px;
@@ -28,6 +29,7 @@
     // background: rgb(243, 242, 242);
     box-shadow: 0px 2px 5px 5px rgba(0, 0,0, 0.05);
     border: 1px solid rgba(0, 0,0, 0.05);
+    border-radius: 15px;
     &:hover {
         box-shadow: 0px 10px 15px 5px rgba(0, 0,0, 0.09);
         // border: 1px solid rgb(132, 143, 132);
@@ -36,12 +38,36 @@
         
     }
 }
+.button-wrapper {
+    width: 100%;
+    margin-top: 50px;
+    // border: 1px solid tomato;
+    display: grid;
+    place-items: center;
+}
+.Home-button {
+    @include btn-primary;
+    padding: 20px 25px;
+    border: none;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    place-items: center;
+    width: 250px;
+    text-decoration: none;
+    &:hover {
+        box-shadow: 5px 10px 30px 5px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        top: -2px;
+        position: relative;
+    }
+}
 .Home-link {
     display: grid;
     grid-template-columns: 1fr;
     // place-items: center;
     border: 1px solid rgb(228, 225, 225);
     text-decoration: none;
+    border-radius: 15px;
 }
 .Home-li-title {
     font-family: $comforta;
@@ -56,7 +82,7 @@
     
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 50px;
 }
 
 .author-profile {
@@ -72,6 +98,7 @@
     img {
         top: 2px;
         position: relative;
+        border-radius: 50%;
     }
 }
 .single-post {
@@ -88,5 +115,26 @@
 .Recipe-box {
     p {
         font-size: 1.4rem;
+    }
+}
+
+// MEDIA QUERIES
+@media (max-width: 480px) {
+    .blog-section {
+        width: 100vw;
+    }
+    .Home-article {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 10px;
+    }
+    .author-profile {
+        grid-template-columns: 50px 1fr 1fr;
+        
+        span {
+            display: inline-block;
+            font-size: 0.6rem;
+        }
     }
 }

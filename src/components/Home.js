@@ -7,6 +7,7 @@ import "../scss/blogs.scss";
 import { MojContext } from "./Context.js";
 
 import clock from "../assets/clock.svg";
+import btnlist from "../assets/btn-list.svg"
 const RECIPES_PER_PAGE = 10;
 
 const Home = (props) => {
@@ -75,7 +76,7 @@ const Home = (props) => {
                     <span>
                     <img src={clock} alt="" />
                       {" "}
-                      {recipe._firstPublishedAt.slice(0, 10)},{" "}
+                      {recipe._firstPublishedAt.slice(0, 10)} |{" "}
                       {recipe._firstPublishedAt.slice(11, 19)}
                     </span>
                   </div>
@@ -86,13 +87,15 @@ const Home = (props) => {
       </article>
       {isFetching && <p className="Home-li-title">...wczytuje się 😎</p>}
       {recipes && recipes.meta.count > RECIPES_PER_PAGE && (
+        <div className="button-wrapper">
         <Link
           className="Home-button"
           disabled={isFetching}
           to={`?skip=${skipping + RECIPES_PER_PAGE}`}
         >
-          Pokaż więcej wpisów
+         <img src={btnlist} alt="" /> Pokaż więcej wpisów
         </Link>
+        </div>
       )}
     </section>
   );
