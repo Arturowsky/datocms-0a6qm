@@ -2,46 +2,45 @@ import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import client from "../client.js";
 import qs from "qs";
-import { Image } from "react-datocms"
-import "../scss/blogs.scss"
+import { Image } from "react-datocms";
+import "../scss/blogs.scss";
 import { MojContext } from "./Context.js";
+
+import clock from "../assets/clock.svg";
 const RECIPES_PER_PAGE = 10;
 
-const Home = props => {
+const Home = (props) => {
   const [recipes, setRecipes] = useState();
   const [isFetching, setIsFetching] = useState(false);
   const [skipping, setSkip] = useState(0);
-  const [ilosc, setIlosc] = useContext(MojContext)
+  const [ilosc, setIlosc] = useContext(MojContext);
 
-  useEffect(
-    () => {
-      setIsFetching(true);
-      const skip =
-        parseInt(
-          qs.parse(props.location.search, { ignoreQueryPrefix: true }).skip,
-          10
-        ) || 0;
-      setSkip(skip);
-      const variables = {
-        skip,
-        first: RECIPES_PER_PAGE
-      };
-      console.log(skip);
-      const fetchData = async () => {
-        try {
-          const result = await client.request(query, variables);
-          setRecipes(result);
-          setIsFetching(false);
-        } catch (error) {
-          console.error(JSON.stringify(error, undefined, 2));
-          setIsFetching(false);
-        }
-      };
+  useEffect(() => {
+    setIsFetching(true);
+    const skip =
+      parseInt(
+        qs.parse(props.location.search, { ignoreQueryPrefix: true }).skip,
+        10
+      ) || 0;
+    setSkip(skip);
+    const variables = {
+      skip,
+      first: RECIPES_PER_PAGE,
+    };
+    console.log(skip);
+    const fetchData = async () => {
+      try {
+        const result = await client.request(query, variables);
+        setRecipes(result);
+        setIsFetching(false);
+      } catch (error) {
+        console.error(JSON.stringify(error, undefined, 2));
+        setIsFetching(false);
+      }
+    };
 
-      fetchData();
-    },
-    [props.location.search]
-  );
+    fetchData();
+  }, [props.location.search]);
 
   return (
     <section className="blog-section">
@@ -50,7 +49,7 @@ const Home = props => {
       <button onClick={() => setIlosc(ilosc -1)}>Odejmij od cyfry powyzej</button> */}
       <article className="Home-article">
         {recipes &&
-          recipes.recipes.map(recipe => (
+          recipes.recipes.map((recipe) => (
             <div className="Home-li" key={`recipe-${recipe.id}`}>
               <Link to={`/recipes/${recipe.slug}`} className="Home-link">
                 <Image
@@ -60,14 +59,26 @@ const Home = props => {
                 <div className="blog-details">
                   <h3 className="Home-li-title">{recipe.title}</h3>
                   <p>
-                    {recipe.abstract
-                      .split(" ")
-                      .slice(0, 20)
-                      .join(" ")}
+                    {recipe.abstract.split(" ").slice(0, 20).join(" ")}
                     ...
                   </p>
-                  
-                  <div className="author-profile"><img src={`${recipe.author.avatar.responsiveImage.src}`} width="36px" height="36px" alt=""/> {recipe.author.name}  <span>{recipe._firstPublishedAt.slice(0,10)}, {recipe._firstPublishedAt.slice(11,19)}</span></div>
+
+                  <div className="author-profile">
+                    <img
+                      src={`${recipe.author.avatar.responsiveImage.src}`}
+                      width="36px"
+                      height="36px"
+                      alt=""
+                    />{" "}
+                    {recipe.author.name}{" "}
+                    
+                    <span>
+                    <img src={clock} alt="" />
+                      {" "}
+                      {recipe._firstPublishedAt.slice(0, 10)},{" "}
+                      {recipe._firstPublishedAt.slice(11, 19)}
+                    </span>
+                  </div>
                 </div>
               </Link>
             </div>
@@ -80,7 +91,7 @@ const Home = props => {
           disabled={isFetching}
           to={`?skip=${skipping + RECIPES_PER_PAGE}`}
         >
-         Pokaż więcej wpisów
+          Pokaż więcej wpisów
         </Link>
       )}
     </section>

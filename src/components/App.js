@@ -7,6 +7,7 @@ import Home from "./Home";
 import About from "./About";
 import Recipe from "./Recipe";
 import Homepage from "./Homepage";
+import Footer from "./Footer"
 
 
 const App = () => (
@@ -20,6 +21,7 @@ const App = () => (
         <Route path="/recipes/:slug" component={Recipe} />
         <Route path="/about" component={About} />
       </main>
+      <Footer />
     </Router>
   </ContextProvider>
 );
