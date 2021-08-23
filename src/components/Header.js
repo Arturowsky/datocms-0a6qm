@@ -61,7 +61,51 @@ const Header = () => {
           className="progress-indicator"
           style={{ width: `${ilosc}%` }}
         ></div>
-        <div className="expand-menu-wrapper" style={{height: menuHeight}}><div className="expand-menu" style={{visibility: menuVisibility}}>My Extra Menu</div></div>
+        <div className="expand-menu-wrapper" style={{height: menuHeight}}><div className="expand-menu" style={{visibility: menuVisibility}}><div className="menu-links">
+            <NavLink
+              exact
+              to="/"
+              className="Header-navLink"
+              activeClassName="Header-isActive"
+            >
+              Strona główna
+            </NavLink>
+            <NavLink
+              to="/projekty"
+              className="Header-navLink"
+              activeClassName="Header-isActive"
+            >
+              Projekty
+            </NavLink>
+            <NavLink
+              to="/oferta"
+              className="Header-navLink open-project"
+              activeClassName="Header-isActive"
+            >
+              Oferta
+            </NavLink>
+            <NavLink
+              to="/o-mnie"
+              className="Header-navLink"
+              activeClassName="Header-isActive"
+            >
+              O mnie
+            </NavLink>
+            <NavLink
+              to="/blog"
+              className="Header-navLink"
+              activeClassName="Header-isActive"
+            >
+              Blog
+            </NavLink>
+            <NavLink
+              to="/kontakt"
+              className="Header-navLink"
+              activeClassName="Header-isActive"
+            >
+              Kontakt
+            </NavLink>
+          </div></div></div>
         <nav className="Header-nav">
           <div>
             <img src={logo} alt="Artur Lewandowicz" />

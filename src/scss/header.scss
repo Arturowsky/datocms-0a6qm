@@ -13,6 +13,9 @@
         width: $w-1280;
         background: pink;
         margin: 0 auto;
+        .menu-links {
+            display: none;
+        }
     }
 }
 .Header-header {
@@ -131,6 +134,10 @@
             width: 100vw;
             background: pink;
             margin: 0 auto;
+            .menu-links {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
         }
     }
     
