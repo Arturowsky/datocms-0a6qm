@@ -6,3 +6,11 @@ footer {
     background: $footer;
     margin-top: 200px;
 }
+
+
+// MEDIA QUERIES
+@media (max-width: 480px) {
+    footer {
+        margin-top: 20px;
+    }
+}
