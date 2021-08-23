@@ -30,7 +30,7 @@ const Recipe = props => {
   );
 
   return (
-    <section>
+    <section className="single-post">
       {isFetching ? (
         <h2>Loading recipe...</h2>
       ) : (
@@ -50,7 +50,7 @@ const Recipe = props => {
               data={recipe.coverImage.responsiveImage}
             />
             <div className="Recipe-box">
-              <h5 className="Recipe-box-title">Ingredients</h5>
+              {/* <h5 className="Recipe-box-title">Ingredients</h5> */}
               <Markdown source={recipe.ingredients} escapeHtml={false} />
             </div>
             {recipe.content.map((block, i) => {
@@ -100,7 +100,7 @@ const query = `
       abstract
       ingredients
       coverImage {
-        responsiveImage(imgixParams: { fit: crop, w: 1000, h: 500 }) {
+        responsiveImage(imgixParams: { fit: crop, w: 1200, h: 500 }) {
           srcSet
           webpSrcSet
           sizes

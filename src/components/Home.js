@@ -66,6 +66,8 @@ const Home = props => {
                       .join(" ")}
                     ...
                   </p>
+                  
+                  <div className="author-profile"><img src={`${recipe.author.avatar.responsiveImage.src}`} width="36px" height="36px" alt=""/> {recipe.author.name}  <span>{recipe._firstPublishedAt.slice(0,10)}, {recipe._firstPublishedAt.slice(11,19)}</span></div>
                 </div>
               </Link>
             </div>
@@ -95,6 +97,7 @@ const query = `
       title
       slug
       abstract
+      _firstPublishedAt
       coverImage {
         responsiveImage(imgixParams: { fit: crop, w: 650, h: 300 }) {
           aspectRatio
@@ -107,6 +110,17 @@ const query = `
           title
           base64
         }
+      }
+      author {
+        _updatedAt
+        avatar {
+          author
+          filename
+          responsiveImage {
+            src
+          }
+        }
+        name
       }
     }
   }
