@@ -6,6 +6,9 @@
     height: 5px;
     background: linear-gradient(to right,#FF3E85, #5FC5C5);
 }
+.expand-menu-wrapper {
+    transition: height 0.2s ease-in-out;
+}
 .Header-header {
     width: 100%;
     position: sticky;

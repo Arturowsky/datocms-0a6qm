@@ -12,7 +12,8 @@ import close from "../assets/x.svg"
 const Header = () => {
   const [ilosc, setIlosc] = useContext(MojContext);
   const [menuState, setMenuState] = useState(false);
-  const [menuTranslate, setMenuTranslate] = useState(150)
+  const [menuHeight, setMenuHeight] = useState(0)
+  const [menuVisibility, setMenuVisibility] = useState("hidden")
   const [menuDisplay, setMenuDisplay] = useState()
   useScrollPosition(({ prevPos, currPos }) => {
     // console.log(currPos.x)
@@ -28,29 +29,43 @@ const Header = () => {
   // const handleMenu = () => {
   //   setMenuState(!menuState);
   //   if (menuState === true) {
-  //     setMenuTranslate(150)
+  //     setMenuHeight(150)
   //     setMenuDisplay("none")
   //   }
   //   else if (menuState === false) {
-  //     setMenuTranslate(0)
+  //     setMenuHeight(0)
   //     setMenuDisplay("block")
   //   }
   // };
+  const expandMenu = () => {
+    setMenuState(!menuState);
+    if (menuState === true) {
+      setMenuHeight(0)
+      setMenuVisibility("hidden")
+      
+    }
+    else if (menuState === false) {
+      setMenuHeight(150)
+      setMenuVisibility("visible")
+      
+    }
+  }
   useEffect(() => {
     AOS.init();
   });
   return (
     <>
       <header className="Header-header">
+        
         <div
           className="progress-indicator"
           style={{ width: `${ilosc}%` }}
-        ></div>
+        ></div><div className="expand-menu-wrapper" style={{height: menuHeight}}><div className="expand-menu" style={{visibility: menuVisibility}}>My Extra Menu</div></div>
         <nav className="Header-nav">
           <div>
             <img src={logo} alt="Artur Lewandowicz" />
           </div>
-          {/* <div>
+          <div>
             <NavLink
               exact
               to="/"
@@ -94,11 +109,11 @@ const Header = () => {
             >
               Kontakt
             </NavLink>
-          </div> */}
+          </div>
 
           <button className="menu-trigger">
             {/* <img src={menuState ? close : menu} alt="menu" onClick={() => handleMenu()} /> */}
-            <img src={menuState ? close : menu} alt="menu"  />
+            <img src={menuState ? close : menu} alt="menu" onClick={() => expandMenu()} /> 
           </button>
         </nav>
       </header>

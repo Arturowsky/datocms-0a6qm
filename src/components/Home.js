@@ -52,7 +52,7 @@ const Home = (props) => {
         {recipes &&
           recipes.recipes.map((recipe) => (
             <div className="Home-li" key={`recipe-${recipe.id}`}>
-              <Link to={`/recipes/${recipe.slug}`} className="Home-link">
+              <Link to={`/wpisy/${recipe.slug}`} className="Home-link">
                 <Image
                   className="Home-img"
                   data={recipe.coverImage.responsiveImage}
