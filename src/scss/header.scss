@@ -11,7 +11,7 @@
     transition: height 0.2s ease-in-out;
     .expand-menu {
         width: $w-1280;
-        background: pink;
+        // background: pink;
         margin: 0 auto;
         .menu-links {
             display: none;
@@ -130,16 +130,32 @@
     .expand-menu-wrapper {
         width: 100vw;
         transition: height 0.2s ease-in-out;
+        display: grid;
+        place-items: center;
         .expand-menu {
             width: 100vw;
-            background: pink;
+            // background: pink;
             margin: 0 auto;
+            display: grid;
+                grid-template-columns: 1fr;
+                place-items: center;
+                padding: 20px 0 20px 0;
             .menu-links {
                 display: grid;
                 grid-template-columns: 1fr;
             }
         }
     }
-    
+    .Header-navLinkkMobile {
+        color: #6c5ce7;
+        font-family: $comforta;
+        font-size: 1.2rem;
+        line-height: 2.3;
+    }
+    .Header-isActiveMobile {
+        color: red;
+        font-family: $comforta;
+        font-size: 1.2rem;
+    }
     
 }

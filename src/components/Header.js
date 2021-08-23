@@ -5,6 +5,7 @@ import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import AOS from "aos";
 // IMPORTS
 import "../scss/header.scss";
+import 'aos/dist/aos.css';
 import logo from "../assets/logo-nav.svg";
 import menu from "../assets/menu.svg";
 import close from "../assets/x.svg"
@@ -45,7 +46,7 @@ const Header = () => {
       
     }
     else if (menuState === false) {
-      setMenuHeight(150)
+      setMenuHeight(250)
       setMenuVisibility("visible")
       
     }
@@ -61,47 +62,47 @@ const Header = () => {
           className="progress-indicator"
           style={{ width: `${ilosc}%` }}
         ></div>
-        <div className="expand-menu-wrapper" style={{height: menuHeight}}><div className="expand-menu" style={{visibility: menuVisibility}}><div className="menu-links">
+        <div data-aos="fade-down" className="expand-menu-wrapper" style={{height: menuHeight}}><div className="expand-menu" style={{visibility: menuVisibility}}><div className="menu-links">
             <NavLink
               exact
               to="/"
-              className="Header-navLink"
-              activeClassName="Header-isActive"
+              className="Header-navLinkMobile"
+              activeClassName="Header-isActiveMobile"
             >
               Strona główna
             </NavLink>
             <NavLink
               to="/projekty"
-              className="Header-navLink"
-              activeClassName="Header-isActive"
+              className="Header-navLinkkMobile"
+              activeClassName="Header-isActiveMobile"
             >
               Projekty
             </NavLink>
             <NavLink
               to="/oferta"
-              className="Header-navLink open-project"
-              activeClassName="Header-isActive"
+              className="Header-navLinkkMobile open-project"
+              activeClassName="Header-isActiveMobile"
             >
               Oferta
             </NavLink>
             <NavLink
               to="/o-mnie"
-              className="Header-navLink"
-              activeClassName="Header-isActive"
+              className="Header-navLinkkMobile"
+              activeClassName="Header-isActiveMobile"
             >
               O mnie
             </NavLink>
             <NavLink
               to="/blog"
-              className="Header-navLink"
-              activeClassName="Header-isActive"
+              className="Header-navLinkkMobile"
+              activeClassName="Header-isActiveMobile"
             >
               Blog
             </NavLink>
             <NavLink
               to="/kontakt"
-              className="Header-navLink"
-              activeClassName="Header-isActive"
+              className="Header-navLinkkMobile"
+              activeClassName="Header-isActiveMobile"
             >
               Kontakt
             </NavLink>

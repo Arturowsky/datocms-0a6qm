@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import { MojContext } from "./Context";
+import AOS from "aos";
 // STYLES
 import "../scss/projects.scss";
 import "../scss/settings.scss";
+import 'aos/dist/aos.css';
 // IMAGES
 import projects from "../assets/projects.svg";
 import btnlist from "../assets/btn-list.svg"
@@ -13,6 +15,9 @@ import backgroundSVG from "../assets/gbg.svg"
 import ol from "../assets/ol.png";
 import el from "../assets/el.png";
 const Projects = () => {
+  useEffect(() => {
+    AOS.init();
+  })
   return (
     <div className="projects-container" style={{background: `url(${backgroundSVG})` }}>
       <div className="projects">
@@ -31,10 +36,10 @@ const Projects = () => {
             <img src={divmaker} alt="" />
           </div>
           <div className="projects-subgrid-img">
-            <div>
+            <div data-aos="fade-up">
               <img src={currencyapp} alt="" />
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-duration="3000">
               <img src={weatherapp} alt="" />
             </div>
           </div>
