@@ -25,17 +25,17 @@ const Header = () => {
     let scrollPercentRounded = Math.round(scrollPercent * 100);
     setIlosc(scrollPercentRounded);
   });
-  const handleMenu = () => {
-    setMenuState(!menuState);
-    if (menuState === true) {
-      setMenuTranslate(150)
-      setMenuDisplay("none")
-    }
-    if (menuState === false) {
-      setMenuTranslate(0)
-      setMenuDisplay("block")
-    }
-  };
+  // const handleMenu = () => {
+  //   setMenuState(!menuState);
+  //   if (menuState === true) {
+  //     setMenuTranslate(150)
+  //     setMenuDisplay("none")
+  //   }
+  //   else if (menuState === false) {
+  //     setMenuTranslate(0)
+  //     setMenuDisplay("block")
+  //   }
+  // };
   useEffect(() => {
     AOS.init();
   });
@@ -97,16 +97,17 @@ const Header = () => {
           </div>
 
           <button className="menu-trigger">
-            <img src={menuState ? close : menu} alt="menu" onClick={() => handleMenu()} />
+            {/* <img src={menuState ? close : menu} alt="menu" onClick={() => handleMenu()} /> */}
+            <img src={menuState ? close : menu} alt="menu"  />
           </button>
         </nav>
       </header>
-      <div className="sub-container" style={{display: menuDisplay}}>
+      {/* <div className="sub-container" style={{height: menuDisplay}}>
         <div
           className="sub-menu" style={{transform: `translateX(${menuTranslate}%)`}}
           
         ><h1>Siemaneczkk co tam ?</h1></div>
-      </div>
+      </div> */}
     </>
   );
 };

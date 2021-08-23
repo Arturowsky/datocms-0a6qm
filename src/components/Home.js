@@ -73,14 +73,14 @@ const Home = props => {
             </div>
           ))}
       </article>
-      {isFetching && <p className="Home-li-title">...Loading</p>}
+      {isFetching && <p className="Home-li-title">...wczytuje się 😎</p>}
       {recipes && recipes.meta.count > RECIPES_PER_PAGE && (
         <Link
           className="Home-button"
           disabled={isFetching}
           to={`?skip=${skipping + RECIPES_PER_PAGE}`}
         >
-         Pokaż więcej wpisów...
+         Pokaż więcej wpisów
         </Link>
       )}
     </section>
