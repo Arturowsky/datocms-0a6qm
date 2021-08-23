@@ -117,17 +117,22 @@
         div {
             img {
                 transform: scale(0.6);
-                margin-left: -50px;
+                margin-left: -35px;
             }
         }
     }
     .menu-links {
         display: none;
     }
-    .expand-menu {
+    .expand-menu-wrapper {
         width: 100vw;
-        background: pink;
-        margin: 0 auto;
+        transition: height 0.2s ease-in-out;
+        .expand-menu {
+            width: 100vw;
+            background: pink;
+            margin: 0 auto;
+        }
     }
+    
     
 }
