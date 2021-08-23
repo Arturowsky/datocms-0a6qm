@@ -97,10 +97,18 @@
     }
     .Header-header {
         width: 100vw;
+        height: 60px;
     }
     .Header-nav {
         width: 100vw;
+        height: 80px;
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 70px;
+        div {
+            img {
+                transform: scale(0.6);
+            }
+        }
     }
+    
 }

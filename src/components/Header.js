@@ -50,7 +50,7 @@ const Header = () => {
           <div>
             <img src={logo} alt="Artur Lewandowicz" />
           </div>
-          <div>
+          {/* <div>
             <NavLink
               exact
               to="/"
@@ -94,7 +94,7 @@ const Header = () => {
             >
               Kontakt
             </NavLink>
-          </div>
+          </div> */}
 
           <button className="menu-trigger">
             {/* <img src={menuState ? close : menu} alt="menu" onClick={() => handleMenu()} /> */}
