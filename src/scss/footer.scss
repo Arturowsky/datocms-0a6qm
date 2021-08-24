@@ -2,9 +2,14 @@
 
 footer {
     width: 100%;
-    height: 200px;
+    height: 100px;
     background: $footer;
     margin-top: 200px;
+    display: grid;
+    place-items: center;
+    img {
+        transform: scale(0.6)
+    }
 }
 
 

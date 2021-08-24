@@ -53,7 +53,10 @@ const Header = () => {
   }
   useEffect(() => {
     AOS.init();
+   
   });
+
+  
   return (
     <>
       <header className="Header-header">

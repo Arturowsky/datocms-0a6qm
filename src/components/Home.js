@@ -70,15 +70,17 @@ const Home = (props) => {
                       width="36px"
                       height="36px"
                       alt=""
+                      className="author-avatar"
                     />{" "}
                     {recipe.author.name}{" "}
                     
-                    <span>
+                    <div>
                     <img src={clock} alt="" />
-                      {" "}
+                      <span>{" "}
                       {recipe._firstPublishedAt.slice(0, 10)} |{" "}
                       {recipe._firstPublishedAt.slice(11, 19)}
-                    </span>
+                      </span>
+                    </div>
                   </div>
                 </div>
               </Link>
