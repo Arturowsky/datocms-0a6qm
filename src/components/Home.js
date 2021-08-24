@@ -72,7 +72,7 @@ const Home = (props) => {
                       alt=""
                       className="author-avatar"
                     />{" "}
-                    {recipe.author.name}{" "}
+                   <span>{recipe.author.name}{" "}</span> 
                     
                     <div>
                     <img src={clock} alt="" />
