@@ -8,7 +8,8 @@
 }
 .expand-menu-wrapper {
     width: 100%;
-    transition: height 0.2s ease-in-out;
+    max-height: 250px;
+    transition: max-height 0.2s ease-in-out;
     .expand-menu {
         width: $w-1280;
         // background: pink;
