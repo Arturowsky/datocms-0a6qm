@@ -129,7 +129,7 @@
     }
     .expand-menu-wrapper {
         width: 100vw;
-        transition: height 0.2s ease-in-out;
+        transition: max-height 0.2s ease-in-out;
         display: grid;
         place-items: center;
         .expand-menu {
