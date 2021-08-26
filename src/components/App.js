@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { ContextProvider } from "./Context"
 
 import SocialLinks from "./SocialLinks"
-import Header from "./Header";
+import Header from "./Header2";
 import Home from "./Home";
 import About from "./About";
 import Recipe from "./Recipe";

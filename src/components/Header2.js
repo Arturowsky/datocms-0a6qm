@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import { MojContext } from "./Context";
 import { NavLink } from "react-router-dom";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
@@ -17,6 +17,9 @@ const Header = () => {
   const [menuHeight, setMenuHeight] = useState(0)
   const [menuVisibility, setMenuVisibility] = useState("hidden")
   const [menuDisplay, setMenuDisplay] = useState()
+
+  const headerRef = useRef();
+  const progressRef = useRef();
   useScrollPosition(({ prevPos, currPos }) => {
     // console.log(currPos.x)
     // console.log(currPos.y)
@@ -41,17 +44,31 @@ const Header = () => {
   // };
   const expandMenu = () => {
     setMenuState(!menuState);
-    if (menuState === true) {
-      setMenuHeight(0)
-      setMenuVisibility("hidden")
+    // if (menuState === true) {
+    //   setMenuHeight(0)
+    //   setMenuVisibility("hidden")
       
-    }
-    else if (menuState === false) {
-      setMenuHeight(250)
-      setMenuVisibility("visible")
+    // }
+    // else if (menuState === false) {
+    //   setMenuHeight(250)
+    //   setMenuVisibility("visible")
       
-    }
+    // }
+    
   }
+  useEffect(() => {
+    if (menuState === true) {
+      gsap.to(headerRef.current, { height: "500px" });
+      setMenuVisibility("visible")
+    }
+    if (menuState === false) {
+      gsap.to(headerRef.current, { height: "0px" });
+      setMenuVisibility("hidden")
+    }
+  }, [menuState])
+  useEffect(() => {
+    gsap.to(progressRef.current, { width: `${ilosc}%`})
+  }, [ilosc])
   useEffect(() => {
     AOS.init();
    
@@ -64,9 +81,10 @@ const Header = () => {
         
         <div
           className="progress-indicator"
-          style={{ width: `${ilosc}%` }}
+          // style={{ width: `${ilosc}%` }}
+          ref={progressRef}
         ></div>
-        <div data-aos="fade-down" className="expand-menu-wrapper" style={{height: menuHeight}}><div className="expand-menu" style={{visibility: menuVisibility}}><div className="menu-links">
+        <div data-aos="fade-down" className="expand-menu-wrapper" ref={headerRef} ><div className="expand-menu" style={{visibility: menuVisibility}}><div className="menu-links">
             <NavLink
               exact
               to="/"
