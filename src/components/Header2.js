@@ -58,7 +58,7 @@ const Header = () => {
   }
   useEffect(() => {
     if (menuState === true) {
-      gsap.to(headerRef.current, { height: "500px" });
+      gsap.to(headerRef.current, { height: "250px" });
       setMenuVisibility("visible")
     }
     if (menuState === false) {
@@ -180,18 +180,12 @@ const Header = () => {
           </div>
 
           <button className="menu-trigger">
-            {/* <img src={menuState ? close : menu} alt="menu" onClick={() => handleMenu()} /> */}
+            
             <img src={menuState ? close : menu} alt="menu" onClick={() => expandMenu()} /> 
           </button>
         </nav>
       </header>
-      {/* <div className="expand-menu-wrapper" style={{height: menuHeight}}><div className="expand-menu" style={{visibility: menuVisibility}}>My Extra Menu</div></div> */}
-      {/* <div className="sub-container" style={{height: menuDisplay}}>
-        <div
-          className="sub-menu" style={{transform: `translateX(${menuTranslate}%)`}}
-          
-        ><h1>Siemaneczkk co tam ?</h1></div>
-      </div> */}
+     
     </>
   );
 };

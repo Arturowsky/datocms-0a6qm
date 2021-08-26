@@ -1,0 +1,14 @@
+@import "../scss/settings.scss";
+
+.btm-wrapper {
+    background: white;
+    border: 1px solid #eee;
+    // box-shadow: 0px 3px 55px 15px rgba(0, 0, 0, 0.14);
+    width: 250px;
+    height: 450px;
+    position: fixed;
+    top: 40%;
+    left: 85%;
+    z-index: 100;
+    box-shadow: 0 0.9px 2.2px rgba(0,0,0,0.02),0 2.2px 5.3px rgba(0,0,0,0.028),0 4.1px 10px rgba(0,0,0,0.035),0 7.4px 17.9px rgba(0,0,0,0.042),0 13.8px 33.4px rgba(0,0,0,0.05),0 33px 80px rgba(0,0,0,0.07);
+}

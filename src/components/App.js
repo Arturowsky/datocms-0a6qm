@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { ContextProvider } from "./Context"
 
 import SocialLinks from "./SocialLinks"
+import BottomRightMenu from "./BottomRightMenu"
 import Header from "./Header2";
 import Home from "./Home";
 import About from "./About";
@@ -15,6 +16,7 @@ const App = () => (
   <ContextProvider>
     <Router>
      <SocialLinks />
+     <BottomRightMenu />
       <Header />
       <main>
         <Route exact path="/" component={Homepage} />
