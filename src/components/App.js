@@ -15,7 +15,7 @@ import Footer from "./Footer"
 const App = () => (
   <ContextProvider>
     <Router>
-     <SocialLinks />
+     {/* <SocialLinks /> */}
      <BottomRightMenu />
       <Header />
       <main>
