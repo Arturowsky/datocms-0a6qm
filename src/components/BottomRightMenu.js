@@ -9,10 +9,11 @@ import sidebar from "../assets/window-sidebar.svg"
 import github from "../assets/github-btm.svg"
 import linked from "../assets/linked-btm.svg"
 import facebook from "../assets/face-btm.svg"
+import closeBtmMenu from "../assets/closeBtmMenu.svg"
 const BottomRightMenu = () => {
     
     const [subMenuVisibility, setSubMenuVisibility] = useState("none")
-    const [subMenu, setSubMenu] = useState(false)
+    const [subMenu, setSubMenu] = useState(true)
     const [disableMenu, setDisableMenu] = useState("none")
     const turnoff = () => {
         setDisableMenu("block")
@@ -46,13 +47,13 @@ const BottomRightMenu = () => {
         <div className="btm-wrapper" style={{display: disableMenu}}>
             {/* <div><button onClick={turnoff}>X</button></div> */}
             {/* <input type="checkbox" className="test"/> */}
-            <div className="btm-item" data-aos="fade-up"><img src={github} alt="" /><p>arturowsky</p></div>
-            <div className="btm-item" data-aos="fade-up"><img src={linked} alt="" /><p>artur.lewandowicz</p></div>
-            <div className="btm-item" data-aos="fade-up"><img src={facebook} alt="" /><p>artur.lewandowicz</p></div>
+            <div className="btm-item"><img src={github} alt="" /><p>arturowsky</p></div>
+            <div className="btm-item"><img src={linked} alt="" /><p>artur.lewandowicz</p></div>
+            <div className="btm-item"><img src={facebook} alt="" /><p>artur.lewandowicz</p></div>
         </div>
         <div className="btm-buttons-group" style={{display: subMenuVisibility}}>
             <button className="btn-first"><img src={goup} alt="" /></button>
-            <button className="btn-second" onClick={openclose}><img src={sidebar} alt="" /></button>
+            <button className="btn-second" onClick={openclose}><img src={subMenu ? sidebar : closeBtmMenu} alt="" /></button>
         </div>
         </>
     )

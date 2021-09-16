@@ -81,19 +81,7 @@ const Projects = () => {
           </p>
           <button className="projects-btn"><img src={btnlist} alt="" />zobacz wszystkie projekty</button>
         </div>
-        {/* <div className="projects-images">
-          <div className="projects-grid-img">
-            <img src={divmaker} alt="" />
-          </div>
-          <div className="projects-subgrid-img">
-            <div data-aos="fade-up">
-              <img src={currencyapp} alt="" />
-            </div>
-            <div data-aos="fade-up" data-aos-duration="3000">
-              <img src={weatherapp} alt="" />
-            </div>
-          </div>
-        </div> */}
+        
         <div className="my-projects">
           <div className="my-projects-single-item" data-aos="fade-up"  onMouseEnter={FirstHoverEffect} onMouseLeave={FirstHoverEffectOut}>
             <div className="my-projects-item-logo"><img src={divmlogo} alt=""/></div>
