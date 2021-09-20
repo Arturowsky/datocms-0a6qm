@@ -6,7 +6,7 @@ import { MojContext } from "./Context";
 import Hero from "./Hero";
 import Stack from "./Stack"
 import Projects from "./Projects"
-
+import Offer from "./Offer"
 // STYLES
 import "../scss/settings.scss";
 import "../scss/index.scss";
@@ -29,7 +29,9 @@ const Artur = () => {
       
       <Hero />
       <Stack />
+      <Offer />
       <Projects />
+      
       
       
     </div>
