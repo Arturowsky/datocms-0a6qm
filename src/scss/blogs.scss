@@ -29,6 +29,7 @@
     grid-template-columns: 1fr;
     // background: rgb(243, 242, 242);
     box-shadow: 0px 2px 5px 5px rgba(0, 0,0, 0.05);
+    // box-shadow: $customShadow;
     border: 1px solid rgba(0, 0,0, 0.05);
     border-radius: 15px;
     &:hover {

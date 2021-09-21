@@ -3,7 +3,7 @@ import { MojContext } from "./Context";
 
 
 // COMPOMENTS
-import Hero from "./Hero";
+import Hero from "./Hero2";
 import Stack from "./Stack"
 import Projects from "./Projects"
 import Offer from "./Offer"
@@ -28,9 +28,12 @@ const Artur = () => {
     <div className="w-full">
       
       <Hero />
+      <Projects />
       <Stack />
       <Offer />
-      <Projects />
+      
+      
+      
       
       
       

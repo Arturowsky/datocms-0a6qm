@@ -12,7 +12,8 @@ import menu from "../assets/menu.svg";
 import close from "../assets/x.svg"
 
 const Header = () => {
-  const [ilosc, setIlosc] = useContext(MojContext);
+  // const [ilosc, setIlosc] = useContext(MojContext);
+  const [ilosc, setIlosc] = useState();
   const [menuState, setMenuState] = useState(false);
   const [menuHeight, setMenuHeight] = useState(0)
   const [menuVisibility, setMenuVisibility] = useState("hidden")

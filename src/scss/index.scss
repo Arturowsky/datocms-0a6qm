@@ -15,11 +15,37 @@ body {
 }
 // HERO COMPONENT
 .hero {
-    width: $w-1200;
+    // width: $w-1200;
+    width: 1280px;
     height: $h-600;
     @include grid-col-2;
     margin: 50px auto;
-    
+    background: url("../assets/herobg.svg");
+    h1 {
+        font-family: $comforta;
+        font-size: 6rem;
+        color: #454343;
+        font-weight: 300;
+        span {
+            display: block;
+            color: #363636;
+        font-weight: 700;
+        }
+    }
+    h2 {
+        font-family: $comforta;
+        font-size: 2.625rem;
+        color: #6B62E0;
+        font-weight: 300;
+    }
+    p {
+        font-family: $comforta;
+        font-size: 1.125rem;
+        color: #6b6b6b;
+        font-weight: 300;
+        letter-spacing: 1;
+        line-height: 2;
+    }
 }
 .intro-name {
     p {
