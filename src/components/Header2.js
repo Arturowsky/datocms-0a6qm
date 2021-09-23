@@ -67,9 +67,9 @@ const Header = () => {
       setMenuVisibility("hidden")
     }
   }, [menuState])
-  useEffect(() => {
-    gsap.to(progressRef.current, { width: `${ilosc}%`})
-  }, [ilosc])
+  // useEffect(() => {
+  //   gsap.to(progressRef.current, { width: `${ilosc}%`})
+  // }, [ilosc])
   useEffect(() => {
     AOS.init();
    

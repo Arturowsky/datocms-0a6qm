@@ -1,0 +1,78 @@
+@import "../scss/settings.scss";
+
+
+.offer-container {
+    width: $w-full;
+}
+
+.offer-grid {
+    @include grid-col-2;
+    width: $w-1200;
+    margin: 100px auto;
+    gap: 30px;
+    // border: 1px solid tomato;
+    padding: 10px;
+    h2 {
+        font-family: $comforta;
+        font-size: 3rem;
+        color: #454343;
+        top: -20px;
+        position: relative;
+    }
+    p {
+        font-family: $comforta;
+        font-size: 1.125rem;
+        color: #6b6b6b;
+        font-weight: 300;
+        letter-spacing: 1;
+        line-height: 2;
+        top: -40px;
+        position: relative;
+    }
+}
+
+
+
+summary {
+    // margin-left: 20px;
+    list-style-image: url("../assets/chevron-right.svg");
+    font-family: $comforta;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4f4f4f;
+    width: 100%;
+    span {
+        margin-left: 20px;
+        // outline: 2px solid tomato;
+        // padding: 5px;
+        // display: block;
+        width: 100%;
+        
+        img {
+            top: 5px;
+            position: relative;
+        }
+        
+    }
+   
+}
+details[open] {
+    summary {
+        list-style-image: url("../assets/chevron-down.svg");
+    }
+}
+details {
+    // margin-left: 50px;
+    font-family: $comforta;
+    // border: 1px solid tomato;
+    width: 600px;
+    line-height: 2;
+    text-align: justify;
+//   text-justify: inter-word;
+    font-size: 1.125;
+    font-weight: 400;
+    color: #828282;
+    &:hover {
+        cursor: pointer;
+    }
+}
