@@ -7,7 +7,7 @@ import "../scss/projects.scss";
 import "../scss/settings.scss";
 import 'aos/dist/aos.css';
 // IMAGES
-import projects from "../assets/projects.svg";
+import projects from "../assets/projects1.svg";
 import btnlist from "../assets/btn-list.svg"
 import divmaker from "../assets/divmaker.svg"
 import divmlogo from "../assets/divmlogo.svg"

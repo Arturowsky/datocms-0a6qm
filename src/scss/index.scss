@@ -15,13 +15,21 @@ body {
     overflow-x: hidden;
 }
 // HERO COMPONENT
+.hero-container {
+    // width: 100%;
+    // height: 100vh;
+    // background: url("../assets/bgcloud.svg");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+}
 .hero {
     // width: $w-1200;
     width: 1280px;
     height: $h-600;
     @include grid-col-2;
     margin: 50px auto;
-    background: url("../assets/herobg.svg");
+    // background: url("../assets/herobg.svg");
+    background: url("../assets/bgj.svg");
     h1 {
         font-family: $comforta;
         font-size: 6rem;
@@ -31,6 +39,9 @@ body {
             display: block;
             color: #363636;
         font-weight: 700;
+        // background: pink;
+        font-size: 4.5rem;
+        padding: 10px 50px;
         }
     }
     h2 {

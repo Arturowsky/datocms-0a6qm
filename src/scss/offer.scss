@@ -30,6 +30,12 @@
         position: relative;
     }
 }
+.offer-sticky {
+    display: flex;
+    align-content: stretch;
+    align-items: flex-start;
+    flex-direction: column;
+}
 
 
 
@@ -41,6 +47,11 @@ summary {
     font-weight: 700;
     color: #4f4f4f;
     width: 100%;
+    
+    img {
+        top: 5px;
+        position: relative;
+    }
     span {
         margin-left: 20px;
         // outline: 2px solid tomato;
@@ -48,31 +59,52 @@ summary {
         // display: block;
         width: 100%;
         
-        img {
-            top: 5px;
-            position: relative;
-        }
+        
         
     }
    
 }
 details[open] {
+    
     summary {
         list-style-image: url("../assets/chevron-down.svg");
+        
     }
 }
 details {
     // margin-left: 50px;
     font-family: $comforta;
+    
     // border: 1px solid tomato;
-    width: 600px;
+    width: 500px;
     line-height: 2;
     text-align: justify;
 //   text-justify: inter-word;
     font-size: 1.125;
     font-weight: 400;
     color: #828282;
+    box-shadow: $customShadow;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    background: #fff;
     &:hover {
         cursor: pointer;
+        background: whitesmoke;
+        
+        // summary {
+        //     margin-left: 10px;
+        // }
+    }
+    // p {
+    //     margin: 50px 10px 20px 50px;
+    //     // padding: 10px 10px;
+    //     // border: 1px solid green;
+    // }
+    div {
+        width: 80%;
+        margin: 0 auto;
+        top: 30px;
+        position: relative;
     }
 }
