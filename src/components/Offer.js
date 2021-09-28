@@ -99,6 +99,7 @@ const detailsArr = [
     isOpen: false,
     image: ruler,
   },
+
  
 ];
 const Offer = () => {
@@ -109,6 +110,14 @@ const Offer = () => {
       top: "250px",
     });
   }, []);
+  // const [stan, setStan] = useState()
+  // const [stan2, setStan2] = useState()
+  // const Pobierz = (e) => {
+  //   setStan2(stan)
+  // }
+  // const Zapisz = e => {
+  //   setStan(e.target.value)
+  // }
   const detailList = detailsArr.map((item, value) => (
     <Details
       name={item.name}
@@ -148,7 +157,9 @@ const Offer = () => {
               page when looking at its layout{" "}
             </p>
           </div>
-          <div> {detailList}</div>{" "}
+          <div> {detailList}
+          {/* <input type="text" onChange={Zapisz}/><button onClick={Pobierz}>GO</button><br /><h1>{stan2}</h1> */}
+          </div>{" "}
         </div>{" "}
       </div>{" "}
     </div>

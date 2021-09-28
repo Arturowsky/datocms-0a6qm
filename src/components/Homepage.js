@@ -7,6 +7,7 @@ import Hero from "./Hero2";
 import Stack from "./Stack"
 import Projects from "./Projects"
 import Offer from "./Offer"
+import Test from "./Test"
 // STYLES
 import "../scss/settings.scss";
 import "../scss/index.scss";
@@ -31,6 +32,7 @@ const Artur = () => {
       <Projects />
       <Stack />
       <Offer />
+      <Test />
       
       
       

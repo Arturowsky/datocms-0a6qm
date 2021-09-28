@@ -57,10 +57,10 @@ $nav-link: #3D424F;
 $btn: #EAE8E8;
 $btn-primary-bg: #6B62E0;
 
-$tech-stack-section-bg: #222F3E;
-$tech-heading: #e6e4e4;
-$tech-paragraph: #c1c1c1;
-
+// $tech-stack-section-bg: #f5f5f5;
+$tech-stack-section-bg: url("../assets/stackbg2.svg");
+$tech-heading: #2c3e50;
+$tech-paragraph: darken($tech-heading, 10);
 $footer: rgb(39, 39, 39);
 
 // FONTS

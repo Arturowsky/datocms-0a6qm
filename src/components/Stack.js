@@ -3,10 +3,11 @@ import AOS from "aos";
 import 'aos/dist/aos.css';
 import "../scss/settings.scss";
 import "../scss/index.scss";
-import waveTop from "../assets/tech-top-wave.svg";
-import waveBottom from "../assets/tech-bottom-wave.svg";
+import waveTop from "../assets/tech-top-wave2.svg";
+import waveBottom from "../assets/tech-bottom-wave2.svg";
 import swirlyArrow from "../assets/swirly-arrow2.svg";
 import logosy from "../assets/logosy.svg";
+import stos from "../assets/stos2.svg";
 import react from "../assets/react.svg";
 import js from "../assets/js.svg"
 import html from "../assets/html5.svg"
@@ -27,16 +28,16 @@ const Stack = () => {
       <div className="stack-bg">
         <div className="tech-stack">
           <div className="stack-info">
-            <h1>Tech Stack</h1>
+            <h1>Stos technologiczny</h1>
             <p>
               Technologie, których używam aby dostarczyć Ci gotowy i
               funkcjonalny projekt dostosowany do Twoich indywidualnych potrzeb
               ✌️✏︎ 
             </p>
-            <img src={swirlyArrow} alt="Swirly Arrow" />
+            {/* <img src={swirlyArrow} alt="Swirly Arrow" /> */}
           </div>
           <div className="stack-img">
-            <img src={logosy} alt="Circle" />
+            <img src={stos} alt="Circle" />
           </div>
         </div>
         <div className="tech-stack-details">
@@ -82,6 +83,7 @@ const Stack = () => {
           </div>
           
         </div>
+       
       </div>
       <div className="wave bottom-wave">
         <img src={waveBottom} alt="" />
