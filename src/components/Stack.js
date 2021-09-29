@@ -83,7 +83,49 @@ const Stack = () => {
           </div>
           
         </div>
-       
+        <div className="tech-stack-details">
+          <div className="single-stack" data-aos="fade-up" data-aos-duration="800">
+            <div className="single-stack-logo"><img src={react} alt="" /></div>
+            <div className="single-stack-title"><h2>ReactJS</h2></div>
+            
+          </div>
+          <div className="single-stack" data-aos="fade-up" data-aos-duration="1000">
+            <div className="single-stack-logo"><img src={js} alt="" /></div>
+            <div className="single-stack-title"><h2>Javascript</h2></div>
+            
+          </div>
+          <div className="single-stack" data-aos="fade-up" data-aos-duration="1200">
+            <div className="single-stack-logo"><img src={html} alt="" /></div>
+            <div className="single-stack-title"><h2>HTML5</h2></div>
+            
+          </div>
+          <div className="single-stack" data-aos="fade-up" data-aos-duration="1400">
+            <div className="single-stack-logo"><img src={css3} alt="" /></div>
+            <div className="single-stack-title"><h2>CSS3</h2></div>
+            
+          </div>
+          <div className="single-stack" data-aos="fade-up" data-aos-duration="1600">
+            <div className="single-stack-logo"><img src={scss} alt="" /></div>
+            <div className="single-stack-title"><h2>Scss</h2></div>
+            
+          </div>
+          <div className="single-stack" data-aos="fade-up" data-aos-duration="1800">
+            <div className="single-stack-logo"><img src={bootstrap} alt="" /></div>
+            <div className="single-stack-title"><h2>Bootstrap</h2></div>
+            
+          </div>
+          <div className="single-stack" data-aos="fade-up" data-aos-duration="2000">
+            <div className="single-stack-logo"><img src={npm} alt="" /></div>
+            <div className="single-stack-title"><h2>NPM</h2></div>
+            
+          </div>
+          <div className="single-stack" data-aos="fade-up" data-aos-duration="2200">
+            <div className="single-stack-logo"><img src={git} alt="" /></div>
+            <div className="single-stack-title"><h2>Git</h2></div>
+            
+          </div>
+          
+        </div>
       </div>
       <div className="wave bottom-wave">
         <img src={waveBottom} alt="" />

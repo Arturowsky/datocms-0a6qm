@@ -94,7 +94,7 @@ const detailsArr = [
     image: browser,
   },
   {
-    name: "Jam Stack",
+    name: "Headless CMS",
     text: "Twoja firma chce zainstniec w sieci ? It is a long established fact that",
     isOpen: false,
     image: ruler,

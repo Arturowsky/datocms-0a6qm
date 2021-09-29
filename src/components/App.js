@@ -10,6 +10,7 @@ import About from "./About";
 import Recipe from "./Recipe";
 import Homepage from "./Homepage";
 import Footer from "./Footer"
+import MyProjects from "./MyProjects"
 
 
 const App = () => (
@@ -23,6 +24,7 @@ const App = () => (
         <Route path="/blog" component={Home} />
         <Route path="/wpisy/:slug" component={Recipe} />
         <Route path="/about" component={About} />
+        <Route path="/projekty" component={MyProjects} />
       </main>
       <Footer />
     </Router>

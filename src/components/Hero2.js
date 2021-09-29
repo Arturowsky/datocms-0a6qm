@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import Typewriter from 'typewriter-effect';
 
 import "../scss/settings.scss";
 import "../scss/index.scss";
@@ -11,7 +12,14 @@ const Hero = () => {
     return (<div className="hero-container"><div className="hero">
     <div>
       <h1>artur<span>lewandowicz</span></h1>
-      <h2>Freelance front end developer</h2>
+      <h2>front end dev
+        <Typewriter
+  options={{
+    strings: ['aplikacje internetowe', 'REACT & Javascript'],
+    autoStart: true,
+    loop: true,
+  }}
+/> </h2>
       <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
     </div>
     <div></div>
